@@ -24,3 +24,6 @@ identicon-*.tar
 
 # Ignore elixir_ls extension files
 .elixir_ls
+
+#ignoring generated icons
+*.png
