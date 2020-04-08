@@ -5,9 +5,18 @@ defmodule Identicon do
 
   def main(input) do
     input
-    |> Identicon.hash_input
-    |> Identicon.pick_color
-    |> Identicon.build_grid
+    |> hash_input
+    |> pick_color
+    |> build_grid
+    |> filter_odd_squares
+  end
+
+  def filter_odd_squares(image) do
+    grid = Enum.filter image.grid, fn({code, _index}) ->
+      rem(code, 2) == 0
+    end
+
+    %Identicon.Image{image | grid: grid}
   end
 
   def build_grid(image) do
