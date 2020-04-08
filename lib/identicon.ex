@@ -1,6 +1,6 @@
 defmodule Identicon do
   @moduledoc """
-  Documentation for `Identicon`.
+    A tool that creates user profile icons like github profile icons
   """
 
   @doc """
